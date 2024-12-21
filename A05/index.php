@@ -6,6 +6,7 @@ $sql = "SELECT islandOfPersonalityID, image, content, color FROM islandcontents"
 $result = $con->query($sql);
 
 $islands = [];
+
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $islands[$row['islandOfPersonalityID']][] = $row;
@@ -142,9 +143,12 @@ if ($result->num_rows > 0) {
             4 => "Student Web Developer Island"
         ];
 
+        $idNames = ["gaming", "story", "journalist", "webdev"];
+
         foreach ($islandNames as $id => $name):
+            $idName = $idNames[$id - 1];
         ?>
-            <div class="w3-container" id="<?= strtolower(str_replace(' ', '', $name)); ?>">
+            <div class="w3-container" id="<?= $idName; ?>">
                 <h2><?= $name ?></h2>
                 <div class="orb-container">
                     <?php if (!empty($islands[$id])): ?>
@@ -162,6 +166,7 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         <?php endforeach; ?>
+        
     </div>
 
 </body>
