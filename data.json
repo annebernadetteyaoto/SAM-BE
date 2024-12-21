@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {
+            "header": "A05",
+            "features": ["HTML", "CSS", "JavaScript", "PHP", "Responsive"],
+            "date": "21 December 2024",
+            "type": "SAM Activity",
+            "stage": "Finished",
+            "link": "https://annebernadetteyaoto.github.io/projects/valorant_api_v2/",
+            "image": "images/valorant.png"
+        }
+    ]
+}
